@@ -94,3 +94,14 @@ Inside the file
     def do_something():
         ...
         return something
+
+#### Writting a report
+
+HTML file - needs to install pytest-html
+
+    pip install pytest-html
+    pytest --html="results.html"
+
+XML file - Comes with pytest
+
+    pytest --junitxml="result.xml"

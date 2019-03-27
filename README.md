@@ -77,4 +77,20 @@ Create a test file and put this inside:
         def test_fuel(self):
             assert True
 
-If you mark a class with a marker, all methods of it will be tested
+If you mark a class with a marker and execute a test for that marker, all methods will be tested.
+It is also possible to mark class methods with other markers.
+
+#### conftest.py
+Everything that is inside conftest.py, will be available through all test files. Just need to decorate it as a fixture.
+
+    vim conftest.py
+
+Inside the file
+
+    from pytest import fixture
+
+
+    @fixture
+    def do_something():
+        ...
+        return something
